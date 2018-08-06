@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XO Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="src/core/dom.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/xo-game.js"></script>
+
+</head>
+<body>
+
+    <script>
+        var xotable = DOM.createElement("div", {id: 'table'});
+        document.body.appendChild(xotable);
+
+        let divs = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ].map( num => {
+            let div = DOM.createElement('div', { id: `step${num}` });
+            div.setAttribute('class','area');
+            div.setAttribute('onclick',`step${num}()`);
+            div.innerHTML = num;
+            return div;
+        } );
+        divs.forEach( div => xotable.appendChild( div ) );
+
+        /*let wins = [1, 2, 3, 4, 5, 6, 7, 8].map( win =>{
+            var line  = DOM.createElement('div', { id: `winnerline${win}` });
+            return line;
+        });
+        wins.forEach( win => xotable.appendChild( win ));
+*/
+
+
+
+        var win = DOM.createElement('div', {id: 'win'});
+        win.setAttribute('class','win congratulation');
+        xotable.appendChild(win);
+
+        var lose = DOM.createElement('div', {id: 'lose'});
+        lose.setAttribute('class','win congratulation');
+        xotable.appendChild(lose);
+
+        var tie = DOM.createElement('div', {id: 'tie'});
+        tie.setAttribute('class','win congratulation');
+        xotable.appendChild(tie);
+
+        var winh1 = DOM.createElement('h1');
+        winh1.innerHTML = "YOU WIN!";
+        document.getElementById("win").appendChild(winh1);
+
+        var loseh1 = DOM.createElement('h1');
+        loseh1.innerHTML = "YOU LOSE!";
+        document.getElementById("lose").appendChild(loseh1);
+
+        var tieh1 = DOM.createElement('h1');
+        tieh1.innerHTML = "TIE!";
+        document.getElementById("tie").appendChild(tieh1);
+
+        var line1 = DOM.createElement('div', {id: 'winnerline1'});
+        xotable.appendChild(line1);
+
+        var line2 = DOM.createElement('div', {id: 'winnerline2'});
+        xotable.appendChild(line2);
+
+        var line3 = DOM.createElement('div', {id: 'winnerline3'});
+        xotable.appendChild(line3);
+
+        var line4 = DOM.createElement('div', {id: 'winnerline4'});
+        xotable.appendChild(line4);
+
+        var line5 = DOM.createElement('div', {id: 'winnerline5'});
+        xotable.appendChild(line5);
+
+        var line6 = DOM.createElement('div', {id: 'winnerline6'});
+        xotable.appendChild(line6);
+
+        var line7 = DOM.createElement('div', {id: 'winnerline7'});
+        xotable.appendChild(line7);
+
+        var line8 = DOM.createElement('div', {id: 'winnerline8'});
+        xotable.appendChild(line8);
+
+    </script>
+</body>
+</html>

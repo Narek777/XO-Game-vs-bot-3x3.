@@ -1,0 +1,26 @@
+x(function(){
+
+     var xoMatrix = [
+         [ 1, 0, 1 ],
+         [ 1, 1, 0 ],
+         [ 0, 0, 1 ]
+     ];
+
+     xoMatrix.forEach( (row, rowIndex) => {
+         var rowElement = createDiv();
+ 		rowElement.className = `area row-${rowIndex}`;
+         document.body.appendChild(rowElement);
+         row.forEach( ( cell, cellIndex) => {
+             var cellElement = createDiv();
+                 cellElement.className = `area cell-${cellIndex}-${rowIndex}`;
+ 				cellElement.onclick = function(){ console.log(this); }
+             rowElement.appendChild(cellElement);
+         } );
+
+     } )
+
+     function createDiv() {
+         return  document.createElement('div');
+     }
+
+ })()

@@ -1,0 +1,212 @@
+#table {
+    width: 900px;
+    height: 900px;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 30px;
+}
+.area {
+    width: 300px;
+    height: 300px;
+    border: 3px solid green;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    color: white;
+}
+
+
+#step1{
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+#step2{
+    border-top: 1px solid white;
+}
+#step3{
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+#step4{
+    border-left: 1px solid white;
+}
+#step6{
+    border-right: 1px solid white;
+}
+#step7{
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+#step8{
+    border-bottom: 1px solid white;
+}
+#step9{
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+
+.x{
+    background-image: url("x.png");
+    background-size: 300px;
+}
+.o{
+    background-image: url("o.png");
+    background-size: 300px;
+}
+.win{
+    height: 900px;
+    width: 900px;
+    background-color: #777dff;
+    position: absolute;
+    z-index: 12;
+    color: white;
+    opacity: 0.7;
+}
+h1{
+    text-align: center;
+    font-size: 120px;
+    margin-top: 350px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.congratulation{
+    display: none;
+}
+
+
+
+#winnerline1{
+    margin: 50px 150px;
+}
+
+
+#winnerline2{
+    margin-top: 50px;
+    margin-left: 450px;
+}
+
+#winnerline3{
+    margin-top: 50px;
+    margin-left: 750px;
+}
+
+#winnerline4{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+#winnerline5{
+    margin-top: 450px;
+    margin-left: 50px;
+}
+
+#winnerline6{
+    margin-top: 750px;
+    margin-left: 50px;
+}
+
+#winnerline7 {
+    transform: rotate(45deg);
+    margin-top: 100px;
+    margin-left: 537px;
+}
+
+#winnerline8 {
+    transform: rotate(135deg);
+    margin-top: 120px;
+    margin-left: 1269px;
+}
+
+
+
+.winnerline000{
+    width: 10px;
+    height: 110px;
+    background: #000000;
+    z-index: 11;
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes example {
+    from {top: 0px;}
+    to {top: 650px;}
+}
+
+
+
+
+
+
+
+
+.winnerline111 {
+    width: 110px;
+    height: 10px;
+    background: #000000;
+    z-index: 11;
+    position: relative;
+    animation-name: example1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes example1 {
+    from {left: 0px;}
+    to {left: 650px;}
+}
+
+
+
+
+.winnerlinexxx {
+    width: 100px;
+    height: 10px;
+    background: #000000;
+    z-index: 11;
+    position: absolute;
+    animation-name: example3;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+
+@keyframes example3 {
+    from {top: 0px; left: 0px;}
+    to {top: 700px; left: 700px;}
+}
+
+
+
+.winnerlinexxxx {
+    width: 100px;
+    height: 10px;
+    background: #000000;
+    z-index: 11;
+    position: absolute;
+    animation-name: example4;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes example4 {
+    from {top: 0px; left: 0px;}
+    to {top: 700px; left: -700px;}
+}
